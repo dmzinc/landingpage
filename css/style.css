@@ -1,0 +1,480 @@
+/* Global Properties */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(218, 28%, 13%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+
+p {
+  line-height: 1.5;
+  font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway", "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* first section */
+#first::after {
+  content: "";
+  display: block;
+  background: url(../images/bg-curvy-desktop.svg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+#first {
+  position: relative;
+  padding-bottom: 10rem;
+  width: 100%;
+  height: 100%;
+  background: hsl(217, 28%, 15%);
+  z-index: 0;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a::after {
+  content: "";
+  height: 0.1rem;
+  width: 0;
+  background: hsl(0, 0%, 100%);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.nav-bar ul li a {
+  margin: 0 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: rgb(196, 195, 193);
+  position: relative;
+}
+
+.nav-bar ul li a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.nav-bar ul li a:hover::after {
+  width: 100%;
+}
+
+/* Introduction */
+.showcase {
+  width: 90%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.model-bg {
+  margin: 18px;
+}
+
+.model-bg img {
+  width: 50rem;
+}
+
+.model-text {
+  width: 42%;
+  margin: auto;
+}
+
+.model-text h1 {
+  margin: 2rem auto;
+}
+
+.model-text p {
+  width: 75%;
+  margin: auto;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.model-text a {
+  padding: 1rem 4.2rem;
+  border-radius: 1.8rem;
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+}
+
+.model-text a:hover {
+  animation-name: effect;
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+/* features */
+#features {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 2.8rem;
+}
+
+#features .features-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 1rem;
+}
+
+#features .box {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#features .box img {
+  padding: 2rem;
+}
+
+#features .box h3 {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+#features .box p {
+  width: 69%;
+  line-height: 1.5;
+}
+
+/* Fylo Team */
+#team {
+  width: 90%;
+  display: flex;
+  margin: 100px auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.team-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.team-bg img {
+  width: 100%;
+  margin: auto;
+  padding: 30px 30px;
+}
+
+.team-content h1 {
+  font-size: 3.5rem;
+  width: 70%;
+}
+
+.team-content p {
+  width: 85%;
+  font-size: 1.2rem;
+  padding: 1.5rem 0 0 0;
+}
+
+.content-link {
+  color: hsl(176, 68%, 64%) !important;
+  border-bottom: 2px solid hsl(176, 68%, 64%);
+  width: 200px;
+  padding-top: 1.5rem;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-link:hover {
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+}
+
+.content-link a {
+  color: hsl(176, 68%, 64%);
+  font-size: 1.2rem;
+  padding-right: 5px;
+}
+
+.content-link a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.content-link img {
+  width: 20px;
+}
+
+/* Comments */
+.bg-quotes {
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  left: 140px;
+}
+
+.comment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4rem 0;
+  position: relative;
+  z-index: 0;
+}
+
+.comment {
+  width: 25%;
+  height: 4%;
+  background-color: hsl(219, 30%, 18%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  margin: 1.5rem;
+  box-shadow: 7px 7px 17px rgba(10, 7, 7, 0.8);
+}
+
+.comment p {
+  margin: auto;
+}
+.comment .profile {
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+  margin-top: 15px;
+}
+.comment img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment .profile .info {
+  margin-left: 1rem;
+}
+
+.comment .profile .info h4 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.comment .profile .info p {
+  font-size: 0.6rem;
+}
+
+/* Access to Fylo */
+#access {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content {
+  background: hsl(217, 28%, 15%);
+  width: 58%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 25%;
+  box-shadow: 5px 5px 15px rgba(17, 17, 17, 0.3);
+  border-radius: 10px;
+  padding: 3rem;
+  z-index: 1;
+  transform: translate(0px, 100px);
+}
+
+.content h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.content p {
+  padding: 0 5rem;
+}
+
+form {
+  padding: 1.5rem;
+}
+
+.emails {
+  border: none;
+  outline: none;
+  border-radius: 1.5rem;
+  width: 33.3rem;
+  padding: 0.8rem 2rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.emails::placeholder {
+  color: rgb(78, 71, 71);
+  opacity: 0.5;
+}
+
+.btn {
+  margin-left: 1.25rem;
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 1.8rem;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  cursor: pointer;
+}
+
+.btn:hover {
+  animation-name: effect;
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes effect {
+  50% {
+    background: hsl(198, 60%, 50%);
+  }
+  100% {
+    background: hsl(176, 68%, 64%);
+  }
+}
+/* footer */
+footer {
+  margin: auto;
+  padding-top: 150px;
+  background: hsl(216, 53%, 9%);
+}
+
+.company-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#logo {
+  margin-bottom: 2.5rem;
+}
+
+.company-footer .company-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.company-info ul {
+  padding: 0;
+}
+
+.company-info .location {
+  display: flex;
+}
+
+.company-info .location li:nth-child(2) {
+  padding-left: 1.6rem;
+  width: 400px;
+}
+
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.phone li:nth-child(2),
+.email li:nth-child(2) {
+  padding-left: 1.6rem;
+}
+
+.about li,
+.about2 li {
+  margin-bottom: 1.25rem;
+}
+
+.about li:hover,
+.about2 li:hover {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+/* Social media */
+.social {
+  width: auto;
+}
+.social i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  background: hsl(216, 53%, 9%);
+  border-radius: 50%;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.social i:hover {
+  color: hsl(176, 68%, 64%);
+  border: 1px solid hsl(176, 68%, 64%);
+}
+
+/* attribution */
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+.attribution a {
+  color: hsl(228, 75%, 43%);
+}
